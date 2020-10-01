@@ -1,12 +1,6 @@
-﻿using System;
-using System.Data.SqlClient;
-using System.Collections.Generic;
-using System.Text;
-using System.Data;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Data.Entity;
-using System.Data.Entity.Migrations;
-using Microsoft.EntityFrameworkCore;
+
 using EntityState = System.Data.Entity.EntityState;
 
 namespace EntityFrameworkDemo

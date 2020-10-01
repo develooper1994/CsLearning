@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-// database model
+﻿// database model
 namespace EntityFrameworkDemo
 {
     public class Product
