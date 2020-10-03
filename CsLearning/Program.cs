@@ -31,9 +31,9 @@ namespace CsLearning
             #endregion
 
             #region Humanizer
-            //Console.WriteLine("car".Pluralize());
-            //Console.WriteLine("person".Pluralize());  // people correct, persons is wrong
-            //Console.WriteLine(36552.ToWords());
+            Console.WriteLine("car".Pluralize());
+            Console.WriteLine("person".Pluralize());  // people correct, persons is wrong
+            Console.WriteLine(36552.ToWords());
             #endregion
 
 

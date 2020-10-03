@@ -20,6 +20,30 @@ namespace EntityFrameworkDemo
             var results = _productdal.GetAll();
             dgwProducts.DataSource = results;
         }
+        private void SearchProductsBAD(string key)
+        {
+            ///<summary>
+            /// Not good for speed and memory.
+            /// Get all data from database and load into memory
+            /// and then FILTER all these GARBAGE.
+            ///
+            /// VERY INEFFICIENT
+            /// </summary>
+            var results = _productdal.GetAll();
+            var query =
+                from result in results
+                let lowName = result.Name.ToLower()
+                where lowName.Contains(key.ToLower())  // key.ToLower()
+                select result;
+            var queryImmediate = query.ToList();
+
+            dgwProducts.DataSource = queryImmediate;
+        }
+        private void SearchProductsGOOD(string key)
+        {
+            var results = _productdal.GetByKey(key);
+            dgwProducts.DataSource = results;
+        }
         private (int Id, string Name, string UnitPrice, string StockAmount) GetDataGridValuesInTheRow()
         {
             //DataGridViewCellCollection cells = dgwProducts.CurrentRow.Cells;
@@ -110,6 +134,19 @@ namespace EntityFrameworkDemo
 
             _Refresh();
             MessageBox.Show("Message Added!");
+        }
+
+        private void tbxSearch_TextChanged(object sender, EventArgs e)
+        {
+            //SearchProductsBAD(tbxSearch.Text);
+            SearchProductsGOOD(tbxSearch.Text);
+            //MessageBox.Show(tbxSearch.Text);
+        }
+
+        private void btnGetById_Click(object sender, EventArgs e)
+        {
+            var result = _productdal.GetById(3);
+            dgwProducts.DataSource = result;
         }
     }
 }
