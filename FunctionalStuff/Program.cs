@@ -7,11 +7,11 @@ namespace FunctionalStuff
     {
         private static void Main(string[] args)
         {
-            //Console.WriteLine("-*-*-*-*-* DelegatesMain *-*-*-*-*-");
-            //Delegates.DelegatesMain();
+            Console.WriteLine("-*-*-*-*-* DelegatesMain *-*-*-*-*-");
+            Delegates.DelegatesMain();
 
-            //Console.WriteLine("-*-*-*-*-* OtherDelegatesMain *-*-*-*-*-");
-            //OtherDelegates.OtherDelegatesMain();
+            Console.WriteLine("-*-*-*-*-* OtherDelegatesMain *-*-*-*-*-");
+            OtherDelegates.OtherDelegatesMain();
 
             Console.WriteLine("-*-*-*-*-* EventsWithDelegate.EventsMain *-*-*-*-*-");
             EventsWithDelegate.EventsMain();

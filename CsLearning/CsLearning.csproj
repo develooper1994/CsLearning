@@ -6,6 +6,7 @@
     <Description>I am learning c# and .net basics</Description>
     <Version>0.0.1</Version>
     <StartupObject>CsLearning.Program</StartupObject>
+    <LangVersion>9.0</LangVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
