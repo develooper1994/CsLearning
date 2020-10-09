@@ -39,6 +39,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Async_Await", "Async_Await"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basics", "Basics", "{B2F0675A-B933-4390-967D-54695044B98E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DownloadWebpages_ASYNC", "..\DownloadWebpages_ASYNC\DownloadWebpages_ASYNC.csproj", "{868B8540-CEBD-4ABE-86A6-52480DB91304}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -101,6 +103,10 @@ Global
 		{64D96E67-A1E3-4B8B-9D5D-25267AD6EC21}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64D96E67-A1E3-4B8B-9D5D-25267AD6EC21}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64D96E67-A1E3-4B8B-9D5D-25267AD6EC21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{868B8540-CEBD-4ABE-86A6-52480DB91304}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{868B8540-CEBD-4ABE-86A6-52480DB91304}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{868B8540-CEBD-4ABE-86A6-52480DB91304}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{868B8540-CEBD-4ABE-86A6-52480DB91304}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -122,6 +128,7 @@ Global
 		{64D96E67-A1E3-4B8B-9D5D-25267AD6EC21} = {8A41843D-F108-4C10-9EED-1C9CD08046B4}
 		{8A41843D-F108-4C10-9EED-1C9CD08046B4} = {0CD21B6E-440A-4666-8BEC-E362D0BFEF34}
 		{B2F0675A-B933-4390-967D-54695044B98E} = {0CD21B6E-440A-4666-8BEC-E362D0BFEF34}
+		{868B8540-CEBD-4ABE-86A6-52480DB91304} = {8A41843D-F108-4C10-9EED-1C9CD08046B4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {366E73A9-1689-43BA-BF52-1E5EBCCE2BA2}
