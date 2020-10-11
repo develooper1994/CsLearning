@@ -45,7 +45,8 @@ namespace DownloadWebpages_ASYNC
             }
 
             WriteLine("\nENTER key pressed: cancelling downloads.\n");
-            s_cts.Cancel();
+            //s_cts.Cancel();
+            s_cts.CancelAfter(1000 * 2);
         };
 
         public async Task DownloadWebpagesMain()

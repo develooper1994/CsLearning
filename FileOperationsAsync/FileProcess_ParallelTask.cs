@@ -15,9 +15,9 @@ namespace FileOperationsAsync
         private const int bufferSize = 4096;
         private const bool useAsync = true;
 
-        public async Task FileProcess_ParallelTaskMain()
+        public async Task FileProcess_ParallelTaskMain(string method = "default")
         {
-            string method = "default";  // 1) default, 2) custom
+            // 1) default, 2) custom
             await ProcessWriteAsync(method: method);
 
             ///<summary>
@@ -28,7 +28,8 @@ namespace FileOperationsAsync
             await ProcessReadAsync(method: method);
         }
 
-        protected async Task ProcessWriteAsync(string dirName = "TextDir", string method = "default") => await SimpleParallelWriteAsync(dirName, method);
+        protected async Task ProcessWriteAsync(string dirName = "TextDir", string method = "default") =>
+            await SimpleParallelWriteAsync(dirName, method);
 
         protected async Task SimpleParallelWriteAsync(string dirName = "TextDir", string method = "default")
         {
@@ -85,14 +86,14 @@ namespace FileOperationsAsync
         {
             var files = Directory.GetFiles(dirName);
             var lenght = files.Length;
-            using FileStream sourceStream = new FileStream(
-                dirName,
-                FileMode.Open, FileAccess.Read, FileShare.None,
-                bufferSize: bufferSize, useAsync: useAsync
-                );
+            //using FileStream sourceStream = new FileStream(
+            //    dirName,
+            //    FileMode.Open, FileAccess.Read, FileShare.None,
+            //    bufferSize: bufferSize, useAsync: useAsync
+            //    );
             var readTasksQuery =
                 from file in files
-                select ReadAllTextAsync(file, sourceStream, method);
+                select ReadAllTextAsync(file, method);
 
             var readTasksAndPaths = readTasksQuery.ToList();
 
@@ -144,6 +145,7 @@ namespace FileOperationsAsync
             return (filePath, selectedTask);
         }
 
+        [Obsolete]
         private static async Task<string> CustomReadAllTextAsync(FileStream sourceStream)
         {
             //using var sourceStream = new FileStream(
