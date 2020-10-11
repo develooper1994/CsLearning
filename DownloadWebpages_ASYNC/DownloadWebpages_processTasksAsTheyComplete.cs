@@ -25,7 +25,7 @@ namespace DownloadWebpages_ASYNC
             int total = 0;
             while (downloadTasks.Any())
             {
-                Task<int> completedTask = await Task.WhenAny(downloadTasks);
+                var completedTask = await Task.WhenAny(downloadTasks);
                 downloadTasks.Remove(completedTask);
                 total += await completedTask;
             }
