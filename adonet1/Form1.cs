@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace adonet1
@@ -85,7 +78,7 @@ namespace adonet1
             MessageBox.Show("dgwProducts_CellClick");
             */
 
-            (_, string Name, string UnitPrice, string StockAmount)  = GetDataGridValuesInTheRow();
+            (_, string Name, string UnitPrice, string StockAmount) = GetDataGridValuesInTheRow();
 
             tbxNameUpdate.Text = Name;
             tbxUnitPriceUpdate.Text = UnitPrice;
