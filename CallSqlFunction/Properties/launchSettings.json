@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "CallSqlFunction": {
+      "commandName": "Project"
+    }
+  }
+}

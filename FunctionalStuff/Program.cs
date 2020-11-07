@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace FunctionalStuff
 {
@@ -84,7 +86,7 @@ namespace FunctionalStuff
     internal static class OtherDelegates
     {
 
-    public static void OtherDelegatesMain()
+        public static void OtherDelegatesMain()
         {
             Console.WriteLine("-*-*-*-*-* Func1 *-*-*-*-*-");
             Func1();
@@ -113,12 +115,25 @@ namespace FunctionalStuff
             int result = add(10, 10);
             Console.WriteLine(result);
 
-            Func<int> getRandomNumber = delegate ()
+            Func<string> getRandomString = () =>
             {
-                Random rnd = new Random();
-                return rnd.Next(1, 100);
+                const string valid = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+                int length = 10;
+                StringBuilder res = new StringBuilder();
+                using (RNGCryptoServiceProvider rng = new RNGCryptoServiceProvider())
+                {
+                    byte[] uintBuffer = new byte[sizeof(uint)];
+
+                    while (length-- > 0)
+                    {
+                        rng.GetBytes(uintBuffer);
+                        uint num = BitConverter.ToUInt32(uintBuffer, 0);
+                        res.Append(valid[(int)(num % (uint)valid.Length)]);
+                    }
+                }
+                return res.ToString();
             };
-            Console.WriteLine(getRandomNumber());
+            Console.WriteLine(getRandomString());
 
 
         }
