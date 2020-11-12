@@ -13,7 +13,8 @@ static string Num2Words(int NumericValue = 1472172, string lang = "en")
 {
     string NumericString = string.Empty;
     // DESKTOP-ET2MV41
-    string connString = @"server=DESKTOP-Q3V23GG;
+    // DESKTOP-Q3V23GG
+    string connString = @"server=DESKTOP-MHUSDAI;
                   initial catalog=School;
                   integrated security=true";
     string sql =

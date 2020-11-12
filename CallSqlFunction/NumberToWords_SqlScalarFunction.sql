@@ -1,4 +1,5 @@
-﻿--USE [School]
+﻿-- Source: https://github.com/develooper1994/DataBasePractice/blob/master/NumbersToWords%20.sql
+--USE [School]
 --GO
 /****** Object:  UserDefinedFunction [dbo].[NumbersToWords3]    Script Date: 11/6/2020 6:25:57 PM ******/
 SET ANSI_NULLS ON
