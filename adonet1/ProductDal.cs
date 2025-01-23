@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Data.SqlClient;
 using System.Collections.Generic;
-using System.Text;
 using System.Data;
+using System.Data.SqlClient;
 
 namespace adonet1
 {
@@ -13,8 +12,9 @@ namespace adonet1
     class ProductDal
     {
         // connect to the database
+        // DESKTOP-ET2MV41
         private const string _connectionString =
-            @"server=DESKTOP-ET2MV41;
+            @"server=DESKTOP-Q3V23GG;
               initial catalog=ETrade;
               integrated security=true";
         // remote connection

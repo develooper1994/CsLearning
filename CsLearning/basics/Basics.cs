@@ -121,8 +121,12 @@ namespace CsLearning.Condition
 
             const int maxAttack = 10;
             int turnCounter = 0;
+<<<<<<< HEAD
 
             Random weapon = new();
+=======
+            RNGCryptoServiceProvider weapon = new RNGCryptoServiceProvider();
+>>>>>>> fec4118a8ea4f9245ec2d129cce856f4fae6c222
             do
             {
                 turnCounter++;

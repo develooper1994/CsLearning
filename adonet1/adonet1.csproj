@@ -2,7 +2,11 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
+<<<<<<< HEAD
     <TargetFramework>net9.0-windows7.0</TargetFramework>
+=======
+    <TargetFramework>net5.0-windows</TargetFramework>
+>>>>>>> fec4118a8ea4f9245ec2d129cce856f4fae6c222
     <UseWindowsForms>true</UseWindowsForms>
     <Version>0.0.1</Version>
     <LangVersion>9.0</LangVersion>

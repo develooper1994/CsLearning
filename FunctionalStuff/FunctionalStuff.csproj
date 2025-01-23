@@ -1,9 +1,17 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
+<<<<<<< HEAD
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net9.0</TargetFramework>
     <LangVersion>9.0</LangVersion>
   </PropertyGroup>
+=======
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<LangVersion>9.0</LangVersion>
+	</PropertyGroup>
+>>>>>>> fec4118a8ea4f9245ec2d129cce856f4fae6c222
 
 </Project>
