@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Xml.Linq;
 
-namespace CsLearning.Numbers
+namespace CsLearning.basics
 {
     static class Numeric
     {
-        public static void numberMain()
+        public static void NumberMain()
         {
             Precision();
         }
@@ -41,12 +42,12 @@ namespace CsLearning.Condition
 {
     static class Conditional
     {
-        public static void conditionMain()
+        public static void ConditionMain()
         {
-            //Conditions();
-            //LoopWhile();
-            //LoopDoWhile();
-            //LoopFor();
+            Conditions();
+            LoopWhile();
+            LoopDoWhile();
+            LoopFor();
             TurnBasedGame();
         }
         private static void Conditions()
@@ -59,7 +60,7 @@ namespace CsLearning.Condition
                 Console.WriteLine("The answer is not greater than 10");
 
             int c = 4;
-            if ((a + b + c > 10) && (a > b))
+            if (a + b + c > 10 && a > b)
             {
                 Console.WriteLine("The answer is greater than 10");
                 Console.WriteLine("And the first number is greater than the second");
@@ -70,7 +71,7 @@ namespace CsLearning.Condition
                 Console.WriteLine("Or the first number is not greater than the second");
             }
 
-            if ((a + b + c > 10) || (a > b))
+            if (a + b + c > 10 || a > b)
             {
                 Console.WriteLine("The answer is greater than 10");
                 Console.WriteLine("Or the first number is greater than the second");
@@ -121,7 +122,7 @@ namespace CsLearning.Condition
             const int maxAttack = 10;
             int turnCounter = 0;
 
-            Random weapon = new Random();
+            Random weapon = new();
             do
             {
                 turnCounter++;
@@ -136,11 +137,10 @@ namespace CsLearning.Condition
                 if (monster <= 0) continue;  // break
 
 
-                // hero attack to monster
+                // monster attack to hero
                 attack = weapon.Next(1, maxAttack);
                 hero -= attack;
                 Console.WriteLine($"Hero was damaged lost {attack} healt and now has {hero}");
-
 
             } while (hero > 0 && monster > 0);
 
@@ -158,7 +158,7 @@ namespace CsLearning.Colls
     {
         public static void collMain()
         {
-            //list();
+            list();
             fibonacci();
         }
         private static void list()
@@ -205,12 +205,12 @@ namespace CsLearning.Colls
                 // new way of indexing ;)))))
                 var previous = fibonacciNumbers[^1];  // fibonacciNumbers.Count - 1
                 var previous2 = fibonacciNumbers[^2];  // fibonacciNumbers.Count - 2
+                var fibNumber = previous + previous2;
 
-                fibonacciNumbers.Add(previous + previous2);
+                fibonacciNumbers.Add(fibNumber);
+                Console.WriteLine(fibNumber);
             }
 
-            foreach (var name in fibonacciNumbers)
-                Console.WriteLine(name);
         }
     }
 }

@@ -14,21 +14,21 @@ namespace LINQs
     {
         private static void Main(string[] args)
         {
-            Console.WriteLine("-*-*-*-*-* Linq1.Linq1Main() *-*-*-*-*-");
-            LinqBasic.Linq1Main();
+            Console.WriteLine("-*-*-*-*-* Linq1.LinQ1Main() *-*-*-*-*-");
+            LinqBasic.LinQ1Main();
 
-            Console.WriteLine("\n-*-*-*-*-* LinqSyntax.LinqSyntaxMain() *-*-*-*-*-");
-            LinqSyntax.LinqSyntaxMain();
+            Console.WriteLine("\n-*-*-*-*-* LinqSyntax.LinQSyntaxMain() *-*-*-*-*-");
+            LinqSyntax.LinQSyntaxMain();
 
 
-            Console.WriteLine("\n-*-*-*-*-* LinqExecution.LinqExecutionMain() *-*-*-*-*-");
-            LinqExecution.LinqExecutionMain();
+            Console.WriteLine("\n-*-*-*-*-* LinqExecution.LinQExecutionMain() *-*-*-*-*-");
+            LinqExecution.LinQExecutionMain();
 
-            Console.WriteLine("\n-*-*-*-*-* LinqKeywords.LinqKeywordsMain() *-*-*-*-*-");
-            LinqKeywords.LinqKeywordsMain();
+            Console.WriteLine("\n-*-*-*-*-* LinqKeywords.LinQKeywordsMain() *-*-*-*-*-");
+            LinqKeywords.LinQKeywordsMain();
 
-            Console.WriteLine("\n-*-*-*-*-* LinqDataTransform.LinqDataTransformMain() *-*-*-*-*-");
-            LinqDataTransform.LinqDataTransformMain();
+            Console.WriteLine("\n-*-*-*-*-* LinqDataTransform.LinQDataTransformMain() *-*-*-*-*-");
+            LinqDataTransform.LinQDataTransformMain();
 
             // Keep the console window open in debug mode.
             Console.WriteLine("Press any key to exit.");
@@ -38,7 +38,7 @@ namespace LINQs
 
     internal static class LinqBasic
     {
-        public static void Linq1Main(string region = "consume-sequence")
+        public static void LinQ1Main(string region = "consume-sequence")
         {
             var result = region switch
             {
@@ -70,15 +70,15 @@ namespace LINQs
 
     internal static class LinqSyntax
     {
-        public static void LinqSyntaxMain()
+        public static void LinQSyntaxMain()
         {
             int[] numbers = { 5, 10, 8, 3, 6, 12 };
-            Console.WriteLine("-*-*-*-*-* LinqSyntaxQuery() *-*-*-*-*-");
-            LinqSyntaxQuery(numbers);
-            Console.WriteLine("-*-*-*-*-* LinqSyntaxMethod() *-*-*-*-*-");
-            LinqSyntaxMethod(numbers);
+            Console.WriteLine("-*-*-*-*-* LinQSyntaxQuery() *-*-*-*-*-");
+            LinQSyntaxQuery(numbers);
+            Console.WriteLine("-*-*-*-*-* LinQSyntaxMethod() *-*-*-*-*-");
+            LinQSyntaxMethod(numbers);
         }
-        public static void LinqSyntaxQuery(int[] numbers)
+        public static void LinQSyntaxQuery(int[] numbers)
         {
             //Query syntax:
             IEnumerable<int> numQuery1 =
@@ -93,7 +93,7 @@ namespace LINQs
             }
             Console.WriteLine(System.Environment.NewLine);
         }
-        public static void LinqSyntaxMethod(int[] numbers)
+        public static void LinQSyntaxMethod(int[] numbers)
         {
             //Method syntax:
             IEnumerable<int> numQuery2 =
@@ -111,7 +111,7 @@ namespace LINQs
 
     internal static class LinqExecution
     {
-        public static void LinqExecutionMain()
+        public static void LinQExecutionMain()
         {
             int[] numbers = { 5, 10, 8, 3, 6, 12 };
             Console.WriteLine("-*-*-*-*-* LazyExecution() *-*-*-*-*-");
@@ -165,10 +165,10 @@ namespace LINQs
             public int ID { get; set; }
             public List<int> Scores;
         }
-        public static void LinqKeywordsMain()
+        public static void LinQKeywordsMain()
         {
-            Console.WriteLine("-*-*-*-*-* GROUPBY() *-*-*-*-*-");
-            GROUPBY();
+            Console.WriteLine("-*-*-*-*-* LinQKeywordsGROUPBY() *-*-*-*-*-");
+            LinQKeywordsGROUPBY();
 
             Console.WriteLine("-*-*-*-*-* GROUPBY_bool() *-*-*-*-*-");
             GROUPBY_bool();
@@ -180,7 +180,7 @@ namespace LINQs
             LET();
 
         }
-        public static void GROUPBY()
+        public static void LinQKeywordsGROUPBY()
         {
             string[] words = { "böğürtlen", "şempanze", "abaküs", "muz", "elma", "peynir", "ayakkabı", "battaniye", "ezogelin çorbası", "paspas", "maliye", "şambali" };
 
@@ -309,7 +309,7 @@ namespace LINQs
             public string City { get; set; }
         }
 
-        public static void LinqDataTransformMain()
+        public static void LinQDataTransformMain()
         {
             //Console.WriteLine("\n-*-*-*-*-* JoiningMultipleInputs() *-*-*-*-*-");
             //JoiningMultipleInputs();

@@ -1,11 +1,12 @@
 ﻿// default system.
-using System;
-
 // my custom imports.
-using CsLearning.Numbers;
-using CsLearning.Condition;
+using CsLearning.basics;
 using CsLearning.Colls;
+using CsLearning.Condition;
+
 using Humanizer;
+
+using System;
 //using CsLearning.basics.Bank;
 
 namespace CsLearning
@@ -15,15 +16,15 @@ namespace CsLearning
         private static void Main(string[] args)
         {
             #region Numbers
-            //Numeric.numberMain();
+            Numeric.NumberMain();
             #endregion
 
             #region Condition
-            //Conditional.conditionMain();
+            Conditional.ConditionMain();
             #endregion
 
             #region Condition
-            //Coll.collMain();
+            Coll.collMain();
             #endregion
 
             #region Objects_Bank

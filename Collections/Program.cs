@@ -56,9 +56,9 @@ namespace Collections
         {
             var students = new List<Student>
             {
-                new Student{ Id = 1, Name = "Bali", Grade = 66 },
-                new Student{ Id = 2, Name = "Kali", Grade = 55 },
-                new Student{ Id = 3, Name = "Mali", Grade = 77 },
+                new() { Id = 1, Name = "Bali", Grade = 66 },
+                new() { Id = 2, Name = "Kali", Grade = 55 },
+                new() { Id = 3, Name = "Mali", Grade = 77 },
             };
             Console.WriteLine("-*-*-*-*-* Before AddRange *-*-*-*-*-");
             students.ForEach(x => Console.WriteLine($"{x.Id} {x.Name} {x.Grade} "));
@@ -73,7 +73,7 @@ namespace Collections
             students.AddRange(students2);
 
             Console.WriteLine("-*-*-*-*-* After AddRange *-*-*-*-*-");
-            students.ForEach(x=>Console.WriteLine($"{x.Id} {x.Name} {x.Grade} "));
+            students.ForEach(x => Console.WriteLine($"{x.Id} {x.Name} {x.Grade} "));
 
             Console.WriteLine("-*-*-*-*-* Other Functions *-*-*-*-*-");
 
@@ -138,7 +138,7 @@ namespace Collections
             arlist1.InsertRange(3, arlist2);
 
             Console.WriteLine("-*-*-*-*-* Before Remove *-*-*-*-*-");
-            for (var i = 0; i<=arlist1.Count-1; i++)
+            for (var i = 0; i <= arlist1.Count - 1; i++)
                 Console.WriteLine(arlist1[i]);
 
             Console.WriteLine("-*-*-*-*-* After Remove *-*-*-*-*-");

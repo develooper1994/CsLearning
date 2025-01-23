@@ -8,7 +8,8 @@ namespace BankyStuff
     {
         public string Number { get; }
         public string Owner { get; set; }
-        public decimal Balance {
+        public decimal Balance
+        {
             get
             {
                 decimal balance = 0;
@@ -23,7 +24,7 @@ namespace BankyStuff
 
         private static int accountNumberSeed = 1234567890;
 
-        private List<Transaction> allTransactions = new List<Transaction>();
+        private List<Transaction> allTransactions = new();
 
         public BankAccount(string name, decimal InitialBalance)
         {
@@ -41,7 +42,7 @@ namespace BankyStuff
             // Gain money
 
             // it is just a protection
-            if(amount <= 0)
+            if (amount <= 0)
                 throw new ArgumentOutOfRangeException(nameof(amount), "Amount of deposit must be positive");
 
             // main process is here
@@ -87,7 +88,7 @@ namespace BankyStuff
         public static void BankAccountMain()
         {
             var account = new BankAccount("Mustafa", 10_000);
-            Console.WriteLine(@$"Account {account.Number} was created for {account.Owner} with {account.Balance} initial balance");
+            Console.WriteLine($"Account {account.Number} was created for {account.Owner} with {account.Balance} initial balance");
 
             // buy something from internet
             account.MakeWithdrawal(120, DateTime.Now, "microphone");
@@ -101,7 +102,7 @@ namespace BankyStuff
             Console.WriteLine($"\n\n{account.GetAccountHistory()}");
 
 
-            /*
+
             // Protections ;)
             // negative initial balance
             try
@@ -127,7 +128,7 @@ namespace BankyStuff
                 Console.WriteLine("Exception caught trying to overdraw");
                 Console.WriteLine(e.ToString());
             }
-            */
+
         }
     }
 }
